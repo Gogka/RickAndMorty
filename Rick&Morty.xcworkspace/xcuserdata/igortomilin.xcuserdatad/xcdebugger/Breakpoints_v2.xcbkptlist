@@ -2,4 +2,70 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rick&amp;Morty/Rick&amp;Morty/Scopes/Rick&amp;MortyList/RemoteListObjects/RMRemoteListModel.swift"
+            timestampString = "567899881.606034"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "getNextCharacters()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rick&amp;Morty/Rick&amp;Morty/Scopes/Rick&amp;MortyList/RemoteListObjects/RMListRemotePresenter.swift"
+            timestampString = "567899881.6061881"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "didReceiveCharactersListResult(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Rick_Morty.RMListRemotePresenter.didReceiveCharactersListResult(RMKit.RMResult&lt;(Swift.Array&lt;RMKit.RMCharacter&gt;, Swift.Bool)&gt;) -&gt; ()"
+                  moduleName = "Rick&amp;Morty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igortomilin/Desktop/Rick&amp;Morty/Rick&amp;Morty/Rick&amp;Morty/Scopes/Rick&amp;MortyList/RemoteListObjects/RMListRemotePresenter.swift"
+                  timestampString = "567899740.364823"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "566">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in Rick_Morty.RMListRemotePresenter.didReceiveCharactersListResult(RMKit.RMResult&lt;(Swift.Array&lt;RMKit.RMCharacter&gt;, Swift.Bool)&gt;) -&gt; ()"
+                  moduleName = "Rick&amp;Morty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igortomilin/Desktop/Rick&amp;Morty/Rick&amp;Morty/Rick&amp;Morty/Scopes/Rick&amp;MortyList/RemoteListObjects/RMListRemotePresenter.swift"
+                  timestampString = "567899740.368566"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "50">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

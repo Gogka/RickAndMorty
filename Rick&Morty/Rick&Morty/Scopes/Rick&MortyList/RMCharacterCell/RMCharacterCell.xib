@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RMCharacterCell" customModule="Rick_Morty" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="313" height="220"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="313" height="220"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pjd-kC-D8z">
+                        <rect key="frame" x="0.0" y="0.0" width="313" height="220"/>
+                    </imageView>
+                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOn-HV-s96">
+                        <rect key="frame" x="0.0" y="176" width="313" height="44"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dqZ-85-X6v">
+                            <rect key="frame" x="0.0" y="0.0" width="313" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAQ-mc-reX">
+                                    <rect key="frame" x="10" y="0.0" width="293" height="44"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="uAQ-mc-reX" firstAttribute="height" secondItem="dqZ-85-X6v" secondAttribute="height" id="43S-M2-bwo"/>
+                                <constraint firstItem="uAQ-mc-reX" firstAttribute="centerX" secondItem="dqZ-85-X6v" secondAttribute="centerX" id="VKR-SQ-log"/>
+                                <constraint firstItem="uAQ-mc-reX" firstAttribute="centerY" secondItem="dqZ-85-X6v" secondAttribute="centerY" id="feD-5b-R8h"/>
+                                <constraint firstItem="uAQ-mc-reX" firstAttribute="leading" secondItem="dqZ-85-X6v" secondAttribute="leading" constant="10" id="odM-jo-23f"/>
+                            </constraints>
+                        </view>
+                        <blurEffect style="light"/>
+                    </visualEffectView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="tOn-HV-s96" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="1Ps-KP-iD6"/>
+                <constraint firstItem="tOn-HV-s96" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="7bc-b7-dvZ"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="pjd-kC-D8z" secondAttribute="top" id="UPP-sg-kty"/>
+                <constraint firstItem="tOn-HV-s96" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="1:5" id="VeR-0d-YtY"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="pjd-kC-D8z" secondAttribute="trailing" id="bXo-j4-b85"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="pjd-kC-D8z" secondAttribute="bottom" id="epo-bA-8L7"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="leading" secondItem="pjd-kC-D8z" secondAttribute="leading" id="lcC-JZ-9Ze"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="tOn-HV-s96" secondAttribute="bottom" id="yeM-RU-3lr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="313" height="220"/>
+            <connections>
+                <outlet property="avatarImageView" destination="pjd-kC-D8z" id="vvr-Bu-7Bh"/>
+                <outlet property="blurEffectView" destination="tOn-HV-s96" id="yk6-EJ-DHH"/>
+                <outlet property="nameLabel" destination="uAQ-mc-reX" id="IXI-99-fjJ"/>
+            </connections>
+            <point key="canvasLocation" x="129" y="104"/>
+        </collectionViewCell>
+    </objects>
+</document>

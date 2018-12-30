@@ -12,6 +12,7 @@ public enum RMError: Error {
     case valueIsEmpty
     case queryLimit
     case parsing
+    case unknown
     case noData
     case withDescription(String)
 }
