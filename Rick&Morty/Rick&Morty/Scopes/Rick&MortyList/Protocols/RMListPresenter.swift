@@ -11,4 +11,5 @@ import Foundation
 protocol RMListPresenter {
     func attach(view: RMListView)
     func getMoreData()
+    func didTapRightBarButtonItem()
 }

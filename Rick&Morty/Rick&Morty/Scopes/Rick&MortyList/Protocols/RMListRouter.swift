@@ -9,5 +9,5 @@
 import Foundation
 
 protocol RMListRouter {
-    
+    func presentClearCacheAlert(completion: @escaping (Bool) -> ())
 }

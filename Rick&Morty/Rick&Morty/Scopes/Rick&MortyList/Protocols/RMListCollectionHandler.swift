@@ -12,7 +12,7 @@ import class UIKit.UICollectionView
 protocol RMListCollectionHandler {
     func attach(collection: UICollectionView)
     func update(withConfigurators configurators: [RMCellConfigurator])
-    func setNoHaveMoreData(to value: Bool)
+    func setIsHaveMoreData(to value: Bool)
     func attach(delegate: RMListCollectionHandlerDelegate)
 }
 

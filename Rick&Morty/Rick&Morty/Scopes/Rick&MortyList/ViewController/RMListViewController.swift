@@ -17,16 +17,31 @@ class RMListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupDependencies()
+        setupExtraUI()
+    }
+    
+    private func setupDependencies() {
         appearence?.setup(self)
         appearence?.localize(self)
         presenter?.attach(view: self)
         collectionHandler.attach(delegate: self)
         collectionView.map { collectionHandler.attach(collection: $0) }
     }
+    
+    private func setupExtraUI() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(didTapRightBarButtonItem))
+    }
+    
+    @objc
+    private func didTapRightBarButtonItem() {
+        presenter?.didTapRightBarButtonItem()
+    }
 }
 
 extension RMListViewController: RMListView {
-    func updateCollection(withConfigurators configurators: [RMCellConfigurator]) {
+    func updateCollection(withConfigurators configurators: [RMCellConfigurator], isHaveMoreData: Bool) {
+        collectionHandler.setIsHaveMoreData(to: isHaveMoreData)
         collectionHandler.update(withConfigurators: configurators)
     }
 }

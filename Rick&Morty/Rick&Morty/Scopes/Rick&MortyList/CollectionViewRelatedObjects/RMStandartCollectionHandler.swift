@@ -24,6 +24,7 @@ class RMStandartCollectionHandler: NSObject, RMListCollectionHandler {
         collection.delegate = self
         collection.dataSource = self
         collection.backgroundView = configurators.isEmpty ? loadingView : nil
+        
         if configurators.isEmpty {
             loadingView.startAnimation()
             collection.backgroundView = loadingView
@@ -60,7 +61,7 @@ class RMStandartCollectionHandler: NSObject, RMListCollectionHandler {
         self.delegate = delegate
     }
     
-    func setNoHaveMoreData(to value: Bool) {
+    func setIsHaveMoreData(to value: Bool) {
         isHaveMoreData = false
     }
 }

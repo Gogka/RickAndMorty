@@ -36,4 +36,8 @@ class RMRemoteListModel: RMListModel {
         })
         listTask?.resume()
     }
+    
+    func clearCache() {
+        RMService.shared.clearCache()
+    }
 }

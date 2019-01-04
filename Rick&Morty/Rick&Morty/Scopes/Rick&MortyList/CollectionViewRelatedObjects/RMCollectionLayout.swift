@@ -19,9 +19,10 @@ class RMCollectionLayout: UICollectionViewLayout {
     }
     
     override func prepare() {
-        guard let collectionView = self.collectionView, cache.isEmpty else { return }
+        guard let collectionView = self.collectionView else { return }
+        cache.removeAll(keepingCapacity: true)
         let cellsSpace = delegate?.spaceBetweenCells(for: self) ?? 10
-        var y = collectionView.contentInset.top
+        var y = collectionView.contentInset.top + cellsSpace
         (0..<collectionView.numberOfItems(inSection: 0))
             .lazy.map({ IndexPath(row: $0, section: 0) }).forEach {
                 let attributes = RMCollectionLayoutAttributes(forCellWith: $0)
@@ -49,5 +50,10 @@ class RMCollectionLayout: UICollectionViewLayout {
         return cache[indexPath.row]
     }
     
-    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool { return true }
+    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+        if (collectionView?.bounds ?? .zero).size != newBounds.size {
+            cache.removeAll(keepingCapacity: true)
+        }
+        return true
+    }
 }

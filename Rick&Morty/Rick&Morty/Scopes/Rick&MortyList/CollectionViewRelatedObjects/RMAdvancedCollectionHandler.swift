@@ -20,7 +20,6 @@ class RMAdvancedCollectionHandler: NSObject, RMListCollectionHandler {
         self.collection = collection
         collection.register(UINib(nibName: "RMCharacterCell", bundle: .main),
                             forCellWithReuseIdentifier: RMStandartCellConfigurator.identificator)
-        //        collection.register(UIView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "loading")
         collection.delegate = self
         collection.dataSource = self
         collection.collectionViewLayout = RMCollectionLayout()
@@ -61,8 +60,8 @@ class RMAdvancedCollectionHandler: NSObject, RMListCollectionHandler {
         self.delegate = delegate
     }
     
-    func setNoHaveMoreData(to value: Bool) {
-        isHaveMoreData = false
+    func setIsHaveMoreData(to value: Bool) {
+        isHaveMoreData = value
     }
 }
 

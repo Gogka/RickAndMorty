@@ -28,6 +28,14 @@ class RMListRemotePresenter: RMListPresenter {
     func getMoreData() {
         model.getNextCharacters()
     }
+    
+    func didTapRightBarButtonItem() {
+        router.presentClearCacheAlert(completion: { [weak self] clear in
+            if clear {
+                self?.model.clearCache()
+            }
+        })
+    }
 }
 
 extension RMListRemotePresenter: RMListModelOutput {
@@ -37,7 +45,7 @@ extension RMListRemotePresenter: RMListModelOutput {
             let configurators = characters.map({
                 RMStandartCellConfigurator(character: $0)
             })
-            DispatchQueue.main.async { self.view?.updateCollection(withConfigurators: configurators) }
+            DispatchQueue.main.async { self.view?.updateCollection(withConfigurators: configurators, isHaveMoreData: !isLastPage) }
         case .error(let error):
             print(error)
         }

@@ -83,6 +83,10 @@ public class RMService {
         return task
     }
     
+    public func clearCache() {
+        session.configuration.urlCache?.removeAllCachedResponses()
+    }
+    
     private func parse<Object: Decodable>(data: Data?, response: URLResponse?, error: Error?) -> RMResult<Object> {
         if (response as? HTTPURLResponse)?.statusCode == 429 {
             return .error(.queryLimit)

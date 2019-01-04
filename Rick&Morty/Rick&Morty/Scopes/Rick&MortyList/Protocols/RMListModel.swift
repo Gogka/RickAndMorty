@@ -11,4 +11,5 @@ import Foundation
 protocol RMListModel {
     func getNextCharacters()
     func attach(output: RMListModelOutput)
+    func clearCache()
 }

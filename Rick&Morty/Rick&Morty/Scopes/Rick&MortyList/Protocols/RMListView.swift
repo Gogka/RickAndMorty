@@ -9,5 +9,5 @@
 import Foundation
 
 protocol RMListView: class {
-    func updateCollection(withConfigurators configurators: [RMCellConfigurator])
+    func updateCollection(withConfigurators configurators: [RMCellConfigurator], isHaveMoreData: Bool)
 }
