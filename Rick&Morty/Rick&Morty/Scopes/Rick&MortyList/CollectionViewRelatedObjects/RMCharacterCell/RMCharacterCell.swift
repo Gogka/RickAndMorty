@@ -16,7 +16,7 @@ class RMCharacterCell: UICollectionViewCell {
     
     private let shadow: CAShapeLayer = {
         let layer = CAShapeLayer()
-        layer.shadowColor = UIColor.gray.cgColor
+        layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 2)
         layer.shadowRadius = 4
         layer.shadowOpacity = 0.8
@@ -37,18 +37,16 @@ class RMCharacterCell: UICollectionViewCell {
         layer.insertSublayer(shadow, below: contentView.layer)
         clipsToBounds = false
     }
-
-//    override func didMoveToSuperview() {
-//        super.didMoveToSuperview()
-//        shadow.removeFromSuperlayer()
-//        guard let superview = self.superview else { return }
-//        superview.layer.insertSublayer(shadow, below: layer)
-//    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         let path = UIBezierPath(roundedRect: bounds, cornerRadius: contentView.layer.cornerRadius).cgPath
         shadow.path = path
         shadow.shadowPath = path
+    }
+    
+    override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
+        guard let attributes = layoutAttributes as? RMCollectionLayoutAttributes else { return }
+        avatarImageView?.transform = attributes.parallax
     }
 }

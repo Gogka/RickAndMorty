@@ -87,15 +87,6 @@ extension RMStandartCollectionHandler: UICollectionViewDataSource, UICollectionV
             delegate?.getMoreData()
         }
     }
-    
-//    func collectionView(_ collectionView: UICollectionView,
-//                        viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-////        switch kind {
-////        case UICollectionView.elementKindSectionFooter:
-////            let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "loading", for: <#T##IndexPath#>)
-////        default: fatalError("undefind king")
-////        }
-//    }
 }
 
 extension RMStandartCollectionHandler: UICollectionViewDataSourcePrefetching {

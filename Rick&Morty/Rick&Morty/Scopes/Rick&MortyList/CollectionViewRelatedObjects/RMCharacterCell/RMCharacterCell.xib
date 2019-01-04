@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pjd-kC-D8z">
-                        <rect key="frame" x="0.0" y="0.0" width="313" height="220"/>
+                        <rect key="frame" x="0.0" y="-30" width="313" height="280"/>
                     </imageView>
                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOn-HV-s96">
                         <rect key="frame" x="0.0" y="176" width="313" height="44"/>
@@ -49,10 +49,10 @@
             <constraints>
                 <constraint firstItem="tOn-HV-s96" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="1Ps-KP-iD6"/>
                 <constraint firstItem="tOn-HV-s96" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="7bc-b7-dvZ"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="pjd-kC-D8z" secondAttribute="top" id="UPP-sg-kty"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="pjd-kC-D8z" secondAttribute="top" constant="30" id="UPP-sg-kty"/>
                 <constraint firstItem="tOn-HV-s96" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="1:5" id="VeR-0d-YtY"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="pjd-kC-D8z" secondAttribute="trailing" id="bXo-j4-b85"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="pjd-kC-D8z" secondAttribute="bottom" id="epo-bA-8L7"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="pjd-kC-D8z" secondAttribute="bottom" constant="-30" id="epo-bA-8L7"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="leading" secondItem="pjd-kC-D8z" secondAttribute="leading" id="lcC-JZ-9Ze"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="tOn-HV-s96" secondAttribute="bottom" id="yeM-RU-3lr"/>
             </constraints>

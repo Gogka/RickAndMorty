@@ -13,7 +13,7 @@ class RMListViewController: UIViewController {
     
     var appearence: RMListAppearence?
     var presenter: RMListPresenter?
-    var collectionHandler: RMListCollectionHandler = RMStandartCollectionHandler()
+    var collectionHandler: RMListCollectionHandler = RMAdvancedCollectionHandler()
     
     override func viewDidLoad() {
         super.viewDidLoad()
