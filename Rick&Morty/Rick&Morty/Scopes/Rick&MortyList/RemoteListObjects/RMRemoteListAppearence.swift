@@ -10,7 +10,7 @@ import UIKit
 
 struct RMRemoteListAppearence: RMListAppearence {
     func localize(_ controller: RMListViewController) {
-        controller.title = "Characters"
+        controller.navigationItem.title = "Characters"
     }
     
     func setup(_ controller: RMListViewController) {

@@ -53,7 +53,7 @@ final class RMStandartCellConfigurator: RMCellConfigurator {
     }
     
     func cancelPrefetchData() {
-        task?.cancel()
+        task?.suspend()
     }
     
     private func startLoadingAvatar() {

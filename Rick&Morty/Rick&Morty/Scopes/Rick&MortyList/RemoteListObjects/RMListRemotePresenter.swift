@@ -24,6 +24,10 @@ class RMListRemotePresenter: RMListPresenter {
         model.attach(output: self)
         model.getNextCharacters()
     }
+    
+    func getMoreData() {
+        model.getNextCharacters()
+    }
 }
 
 extension RMListRemotePresenter: RMListModelOutput {

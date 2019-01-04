@@ -20,6 +20,7 @@ class RMListViewController: UIViewController {
         appearence?.setup(self)
         appearence?.localize(self)
         presenter?.attach(view: self)
+        collectionHandler.attach(delegate: self)
         collectionView.map { collectionHandler.attach(collection: $0) }
     }
 }
@@ -27,5 +28,11 @@ class RMListViewController: UIViewController {
 extension RMListViewController: RMListView {
     func updateCollection(withConfigurators configurators: [RMCellConfigurator]) {
         collectionHandler.update(withConfigurators: configurators)
+    }
+}
+
+extension RMListViewController: RMListCollectionHandlerDelegate {
+    func getMoreData() {
+        presenter?.getMoreData()
     }
 }

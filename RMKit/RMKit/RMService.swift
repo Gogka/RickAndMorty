@@ -23,7 +23,10 @@ public class RMService {
     }()
     
     private let session: URLSession = {
-        let configuration = URLSessionConfiguration.ephemeral
+        // TODO: - Change to memory storage
+//        let configuration = URLSessionConfiguration.ephemeral
+        let configuration = URLSessionConfiguration.default
+        configuration.urlCache = URLCache(memoryCapacity: 0, diskCapacity: 100 * 1024 * 1024, diskPath: nil)
         configuration.requestCachePolicy = .returnCacheDataElseLoad
         return URLSession(configuration: configuration)
     }()
